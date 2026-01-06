@@ -175,7 +175,7 @@ export default function ServicesPage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-primary/95" />
+          <div className="absolute inset-0 bg-primary/[0.97]" />
         </div>
         <div className="relative container-wide text-primary-foreground">
           <div className="mx-auto max-w-2xl text-center">
@@ -191,7 +191,7 @@ export default function ServicesPage() {
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {vipFeatures.map((feature) => (
-              <div key={feature.title} className="rounded-xl border border-primary-foreground/20 p-6 text-center transition-all hover:bg-primary-foreground/5">
+              <div key={feature.title} className="rounded-xl border border-primary-foreground/20 bg-primary/60 backdrop-blur-sm p-6 text-center transition-all hover:bg-primary/70">
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/20">
                   <feature.icon className="h-7 w-7 text-accent" />
                 </div>
