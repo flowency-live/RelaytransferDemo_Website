@@ -167,36 +167,27 @@ export default function ServicesPage() {
       </section>
 
       {/* VIP Features */}
-      <section className="relative section-padding overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=1920&q=80"
-            alt="Executive Mercedes interior"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-primary/[0.97]" />
-        </div>
-        <div className="relative container-wide text-primary-foreground">
+      <section className="section-padding bg-primary">
+        <div className="container-wide">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium uppercase tracking-widest text-accent">
               Premium Experience
             </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-primary-foreground sm:text-4xl">
               VIP Preferences
             </h2>
-            <p className="mt-4 text-lg text-primary-foreground/70">
+            <p className="mt-4 text-lg text-primary-foreground/80">
               Every detail considered. Your preferences remembered and respected on every journey.
             </p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {vipFeatures.map((feature) => (
-              <div key={feature.title} className="rounded-xl border border-primary-foreground/20 bg-primary/60 backdrop-blur-sm p-6 text-center transition-all hover:bg-primary/70">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/20">
-                  <feature.icon className="h-7 w-7 text-accent" />
+              <div key={feature.title} className="rounded-xl bg-white p-6 text-center shadow-soft transition-all hover:shadow-elevated hover:-translate-y-1">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
+                  <feature.icon className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="mt-4 font-semibold">{feature.title}</h3>
-                <p className="mt-2 text-sm text-primary-foreground/70">{feature.description}</p>
+                <h3 className="mt-4 font-semibold text-foreground">{feature.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{feature.description}</p>
               </div>
             ))}
           </div>
