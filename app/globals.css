@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Theme colors - set from lib/config/theme.ts */
+  --color-primary: #0F2E2E;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #5E6F73;
+  --color-secondary-foreground: #FFFFFF;
+  --color-background: #F6F8F7;
+  --color-foreground: #0F2E2E;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #0F2E2E;
+  --color-muted: #E8EDEB;
+  --color-muted-foreground: #5E6F73;
+  --color-accent: #C7B98A;
+  --color-accent-foreground: #0F2E2E;
+  --color-border: #D1D9D6;
+  --color-success: #8FAFA3;
+  --color-warning: #C7B98A;
+  --color-error: #A65D57;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-card text-card-foreground rounded-lg shadow-card border border-border;
+  }
+
+  .card-elevated {
+    @apply bg-card text-card-foreground rounded-lg shadow-elevated border border-border;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  .transition-default {
+    @apply transition-all duration-200 ease-out;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
