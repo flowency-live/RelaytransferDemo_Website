@@ -170,8 +170,8 @@ export default function ServicesPage() {
       <section className="relative section-padding overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&q=80"
-            alt="Luxury interior"
+            src="https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=1920&q=80"
+            alt="Executive Mercedes interior"
             fill
             className="object-cover"
           />
